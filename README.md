@@ -39,6 +39,12 @@ For each point in the grid,
     If the difference of its highest and lowest elevation is larger than the recorded path, replace that
 ```
 
+#### Sample output
+```
+Analyzed map: 1000x1000 (1000000 points) in 8.721 seconds.
+The longest path (length = 15) with largest drop (size = 1422) is 1422 -> 1412 -> 1316 -> 1304 -> 1207 -> 1162 -> 965 -> 945 -> 734 -> 429 -> 332 -> 310 -> 214 -> 143 -> 0
+```
+
 ### Just-In-Time (method2-buggy.js)
 I'd have thought that this is a better way as it'd construct all possible paths while initializing the data structure. The idea was to explore the north and west sibling points when visiting a point to check and create paths. But it'd ended up with more complex checking and data traversing (need to maintain a lot more references too) yet I couldn't get it correctly. I might still revisit this when I have time next time. But the first approach should be sufficient for now.
 
